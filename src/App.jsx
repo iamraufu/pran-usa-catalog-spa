@@ -4,14 +4,14 @@ import {
   useMemo,
   useDeferredValue,
 } from "react";
-
+import productsData from "../data/products.json"
 import ProductCard from "./components/Product/ProductCard";
 import "./App.css";
 
 const ITEMS_PER_PAGE = 40;
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(productsData);
   const [searchText, setSearchText] = useState("");
   const [selectedCategory, setSelectedCategory] =
     useState("ALL");
